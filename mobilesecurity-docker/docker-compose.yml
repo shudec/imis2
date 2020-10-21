@@ -1,0 +1,13 @@
+# docker-compose.yml
+version: '3'
+services:
+  mobilesecurity-docker:
+    build: .
+    image: mobilesecurity-docker:0.1
+    ports:
+      - "2222:22"
+      - "5901:5901"
+      - "5555:5555"
+      - "5554:5554"
+      - "5037:5037"
+    privileged: true
